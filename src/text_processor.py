@@ -6,6 +6,7 @@ def get_word_list(file_path: str, encoding='utf-8') -> list[str]:
 
     # Sonder- und Satzzeichen mit regulärem Ausdruck entfernen (nur Buchstaben und Zahlen behalten)
     text = re.sub(r'[^a-zA-ZäöüÄÖÜß0-9\s]', '', text)
+    text = text.lower()
 
     # In einzelne Wörter aufteilen
     words = text.split()
