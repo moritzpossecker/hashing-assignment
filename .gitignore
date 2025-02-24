@@ -1,2 +1,6 @@
 paper/**
 !paper/**/*.tex
+
+*.idea/
+*.venv/
+*__pycache__/
