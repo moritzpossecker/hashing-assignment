@@ -24,6 +24,7 @@ def get_dominant_values(hash_table: list) -> list:
     for bucket in hash_table:
         if bucket is None:
             dominant_values.append(['', 0, 0])
+            continue
 
         most_common_word = max(set(bucket), key=bucket.count)
         count = bucket.count(most_common_word)
