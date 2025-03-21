@@ -23,6 +23,8 @@
 
 = Problemstellung
 
+== Textstringanalyse
+
 Es soll ein Text mithilfe von Hashing verarbeitet werden. Dabei werden die einzelnen Worte des Textes in einer Liste der länge $m$ abgebildet.
 Der Algorithmus zur Erstellung einer Hashtabelle durchläuft dabei PLATZHALTER Schritte.\
 Zunächst muss der gegebene Text in eine Liste der Wörter umgewandelt werden. Dazu werden in Vorbereitung alle Sonderzeichen aus dem Text entfernt. 
@@ -38,6 +40,9 @@ wird zu:
 ```python
 words = ['es', 'war', 'einmal', 'mitten', 'im', 'winter', 'und', 'die', 'schneeflocken']
 ```
+
+== Hashing
+
 
 Im nächsten Schritt kann dann mit der entstandenen Wortliste weitergearbeitet werden. Aus ihr soll eine Hashtabelle erzeugt werden. Dazu wird eine leere Liste der Länge $m$ angelegt. In diese wird dann Schritt für Schritt jedes Wort an die, dem generierten Hashwert entsprechende, Stelle gelegt. Hierbei kann allerdings das Problem auftreten, dass Wörter den gleichen Hashwert haben und somit an die gleiche Stelle in der Liste gehören müssten. Dieses Problem nennt man Adresskolission und tritt bei einer Anzahl von $sqrt((pi m )/ 2)$ Schlüsseln auf einer Hashliste der Größe $m$ zu einer Wahrscheinlichkeit von mehr als 50% auf.
 Für den Umgang mit diesem Problem gibt es drei mögliche Lösungsansätze.
